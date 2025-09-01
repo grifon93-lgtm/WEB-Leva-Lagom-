@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*product_gallery*/
+
+/*normal*/
+
+.product_gallery_pc ul li img {
+//    object-fit: cover;
+}
+.living {
+    height: 100%;
+    bottom: 0;
+    left: -290px;
+}
+.dinninig {
+    height: 140%;
+    bottom: 0px;
+    left: -180px;
+}
+.bed {
+    height: 170%;
+    bottom: -330px;
+    left: -80px;
+}
+.light {
+    height: 110%;
+    bottom: 0;
+    left: -150px;
+}
+.kitchen {
+    height: 100%;
+    bottom: 0;
+    left: -190px;
+}
+.zakka {
+    bottom: 0;
+    right: -360px;
+}
+
+/*マウスオーバーされたli*/
+.product_gallery_pc ul li.open {
+    width: 35%;
+}
+.open .caption {
+    transform: translateY(0);
+    transition: 0.45s ease-in-out;
+}
+.open img {
+    opacity: 1;
+    filter: brightness(100%);
+    transform: translateX(0);
+    transition: transform 3s ease-out; /
+}
+.open img {
+    transform: translateX(-10px);
+}
+/*マウスオーバーされたli以外のli*/
+.product_gallery_pc ul li.close {
+    width: 13%;
+    transition: 0.4s ease-in;
+}
+.close .caption {
+    transform: translateY(-80px);
+}
+.close img {
+//    filter: grayscale(70%);
+    filter: brightness(60%);
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 1000px) {
+    .living {
+    width: 100%;
+}
+.dinninig {
+    width: 100%;
+    height: 100%;
+}
+.bed {
+    height:120%;
+    width: 100%;
+    bottom: 20px;
+    left: 0px;
+}
+.kitchen {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0px;
+}
+.zakka {
+    width: 100%;
+    bottom: 0;
+    right: 0px;
+}
+}
+
+@media screen and (max-width: 780px) {
+    .bx-slider .caption {
+        font-size: 150%;
+        line-height: 2;
+    }
+    .bx-controls-direction {
+        margin-bottom: 0;
+    }
+
+}

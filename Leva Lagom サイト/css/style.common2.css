@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+body {
+    width: 100%;
+//    width: 1200px;
+    margin: 0 auto;
+//    background: #ccc;
+}
+#wrapper {
+    width: 100%;
+}
+.picture img {
+    width: 100%;
+}
+
+
+/*==header==*/
+
+header {
+    width: 100%;
+    margin: 0 auto;
+//    padding: 0 16px;
+}
+header h1 {
+    width:  100%;
+    font-size: 500%;
+    background: #12335f;
+    text-align: left;
+}
+header h1 a {
+    color: #fff;
+}
+
+/*nav*/
+nav {
+    width: 40%;
+    height: 100vh;
+    color: #000;
+    background: #fff100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+}
+.list-box {
+    position: relative;
+//    padding: 160px 0 0 24px;
+    padding-left: 24px;
+}
+.parent-list {
+    padding-top: 36%;
+    width: 100%;
+//    background: #fcc;
+    position: absolute;
+    z-index: 110;
+    transition: 0.2s ease-in-out;
+}
+.parent-list li {
+    font-size: 200%;
+}
+.parent-list li:nth-child(3) {
+    cursor: pointer;
+}
+.parent-list li:nth-child(4) {
+    cursor: pointer;
+}
+
+.parent-list li a {
+//    font-size: 200%;
+    line-height: 1.5;
+}
+.parent-list li a:hover {
+    color: #00f;
+    border-bottom: solid 2px #00f;
+//    transition: 0.2s;
+}
+
+nav .child-box {
+    display: none;
+    padding-top: 10%;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 120;
+//    background: #cff;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+}
+.parent-list .child-box .to-before {
+    width: 76px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 6%;
+//    padding: 32px;
+    color: #fff;
+//    font-size: 160%;
+    border-radius: 50%;
+    background: #12335f;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+.parent-list .child-box .parent {
+    font-size: 100%;
+}
+.child-box ul {
+    padding-left: 24px;
+}
+.parent-list .child-box ul li {
+    font-size: 100%;
+}
+
+/*nav-open*/
+.nav-wrap.is-open {
+    transform: translateX(0);
+    transition: transform 0.2s ease-in-out;
+}
+.parent-list.is-slided-left {
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+}
+.child-box.is-active {
+    display: block;
+//    transform: translateX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+/*trigger, triggerBG*/
+
+
+.trigger,
+.trigger span {
+    display: inline-block;
+}
+.trigger {
+    display: block;
+    width: 70px;
+    height: 80px;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 200;
+    cursor: pointer;
+    background: #fff100;
+    text-align: center;
+}
+.trigger span {
+    width: 75%;
+    height: 4px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background: #12335f;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.trigger span:nth-of-type(1) {
+    top: 10px;
+    transition: 0.2s ease-in-out;
+}
+.trigger span:nth-of-type(2) {
+    top: 28px;
+    transition: 0.2s ease-in-out;
+}
+.trigger span:nth-of-type(3) {
+    top: 46px;
+    transition: 0.2s ease-in-out;
+}
+
+/*trigger-active*/
+.trigger.is-active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+    transition: 0.2s ease-in-out;
+}
+.trigger.is-active span:nth-of-type(2) {
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+.trigger.is-active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+    transition: 0.2s ease-in-out;
+}
+
+
+.triggerBg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(15, 41, 77, 0.5);
+    z-index: 90;
+    transition: 0.2s;
+}
+.triggerBg.is-active {
+    display: block;
+    transition: 0.2s;
+}
+
+
+/*container*/
+.container {
+//    width: 96%;
+    width: 100%;
+    margin: 0 auto;
+}
+.container div {
+//    margin-bottom: 64px;
+//    background: #00ffff;
+}
+
+
+
+/*==footer==*/
+footer {
+    width: 100%;
+    padding: 16px 0 48px;
+    color: #fff;
+    background: #12335f;
+}
+.footer-wrap {
+    padding: 0 16px;
+}
+footer h2 {
+    font-size: 300%;
+}
+footer h2 a {
+    color: #fff;
+}
+.footer_box {
+    display: flex;
+    justify-content: space-between;
+}
+.shop_profile {
+    font-size: 120%;
+}
+.link_box ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, auto);
+}
+.link_box ul li {
+    margin-right: 80px;
+}
+.link_box a {
+    color: #fff;
+    font-size: 120%;
+    line-height: 2;
+}
+.link_box a:hover {
+    color: #fff100;
+}
+
+/*==up_to_pagetop==*/
+.up_to_pagetop p {
+  position: fixed;
+  z-index: 10;
+  bottom: 32px;
+  right: 48px;
+    aspect-ratio: 1 / 1;
+    width: 48px;
+  padding: 4px;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    background: #fff100;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px rgba(106, 90, 205, 0.6);
+}
+
+.botan {
+    max-width: 300px;
+    padding: 8px;
+    margin: 32px 0 8px;
+    text-align: center;
+    border: solid #fff100 1px;
+}
+
+.botan:hover {
+    background: #fff000;
+}
+
+.pankuzu ul {
+    margin-left: 24px;
+    display: flex;
+    text-align: center;
+}
+.pankuzu ul li {
+    padding: 16px 0;
+}
+.pankuzu ul li::after {
+    content: ">";
+    margin: 0 16px;
+}
+.pankuzu ul li:last-child::after {
+    content: none;
+} 
+
+
+
+/*responsive*/
+@media screen and (max-width: 780px) {
+    header h1 {
+        font-size: 300%;
+    }
+    nav {
+        width: 60%;
+    }
+    .trigger {
+        display: block;
+    }
+    .footer_box {
+        display: block;
+    }
+    .shop_profile,
+    .link_box {
+        margin: 0 auto 48px;
+    }
+    .link_box ul li {
+    margin-right: 48px;
+}
+}
+@media screen and (max-width: 430px) {
+    nav {
+        width: 100%;
+        height: 100vh;
+    }
+
+}
+
+/*@media screen and (max-width: 432px) {
+    .nav-visual_box nav {
+        padding-top: 0;
+        width: 60%;
+    }
+    .nav-visual_box nav ul {
+        height: 100vh;
+    }
+}*/

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*
+main_visual 有ページ　PC版
+開いた子リストの設定
+.nav-visual_box nav ul .li-parent {
+    position: relative;
+    z-index: 1;
+}
+.li-parent .active .dropdown_menu {
+    max-height: 600px;
+    position: relative;
+    z-index: 0;
+}
+//  親要素を上にスライドさせるスタイル
+//  子リストが開いたときにJavaScriptで.shiftedクラスを追加します 
+.nav-visual_box nav ul .shifted {
+    transform: translateY(-var(--shift-height)); /* JavaScriptで --shift-height を設定 
+    transition: transform 0.5s ease-out;
+}
+*/
+
+/*nav開閉*/
+nav .open {
+    transform: translateX(0);
+    transition: 0.2s ease-in-out;
+}
+nav .close {
+    transform: translateX(-300px);
+    transition: 0.2s ease-in-out;
+}
